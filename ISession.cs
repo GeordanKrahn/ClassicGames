@@ -14,8 +14,14 @@ namespace Gaming
 
         /// <summary> Current Session State </summary>
         public GameSessionState SessionState { get; set; }
+
+        /// <summary> Runs at beginning of session </summary>
         void Initialize();
+
+        /// <summary> Continuously runs during session </summary>
         void GameLoop();
+
+        /// <summary> Runs at the end of the game. </summary>
         void EndGame();
 
     }
