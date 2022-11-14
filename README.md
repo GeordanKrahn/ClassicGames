@@ -7,3 +7,6 @@
 
 ## Dice
 - This library gives you a very simple Die and DiceHand classes for simple dice games, or even for table top games with different sided dice.
+
+## Gaming
+- This library supplies you with a simple framework to create a session. This game session is where your game code will be run.
