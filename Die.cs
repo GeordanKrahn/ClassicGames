@@ -1,24 +1,5 @@
 ﻿namespace Dice
 {
-    /// <summary>Represents the number of faces for a die</summary>
-    public enum DieType
-    {
-        /// <summary> Four Sided Die </summary>
-        D4 = 4,
-        /// <summary> Six Sided Die </summary>
-        D6 = 6,
-        /// <summary> Eight Sided Die </summary>
-        D8 = 8,
-        /// <summary> Ten Sided Die </summary>
-        D10 = 10,
-        /// <summary> Twelve Sided Die </summary>
-        D12 = 12,
-        /// <summary> Sixteen Sided Die </summary>
-        D16 = 16,
-        /// <summary> Twenty Sided Die </summary>
-        D20 = 20
-    }
-
     /// <summary>3D Geometrical object whose faces count from 1 - nSides</summary>
     public class Die
     {
@@ -76,55 +57,6 @@
         public override string ToString()
         {
             return $"D{Sides}-Value: {FaceValue}";
-        }
-    }
-
-    /// <summary>
-    /// Represents a dice hand for a player
-    /// </summary>
-    public class DiceHand
-    {
-
-        /// <summary>
-        /// The dice the player possesses
-        /// </summary>
-        public List<Die> Dice;
-
-        /// <summary>
-        /// Empty Constructor
-        /// </summary>
-        public DiceHand() => Dice = new List<Die>();
-
-        /// <summary>
-        /// Constructor taking a list of dice
-        /// </summary>
-        /// <param name="dice">ListofDice for the hand</param>
-        public DiceHand(List<Die> dice)
-        {
-            Dice = new List<Die>();
-            Dice = dice;
-        }
-
-        /// <summary>
-        /// Randomly reassigns the FaceValue of the Die.
-        /// </summary>
-        public void Roll()
-        { 
-            foreach(Die die in Dice)
-            {
-                die.Roll();
-            }
-        }
-
-        /// <summary>
-        /// ToString(): string representation of this object
-        /// </summary>
-        /// <returns>string</returns>
-        public override string ToString()
-        {
-            string str = "";
-            foreach(Die die in Dice) { str += die.ToString() + "\n"; }
-            return $"DiceHand: \n{str}";
         }
     }
 }
